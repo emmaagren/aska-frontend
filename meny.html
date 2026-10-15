@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Meny – ASKA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+
+<header class="hero hero-small">
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Restaurang ASKA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="galleri.html">Bilder</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <button class="menu-toggle" aria-label="Öppna meny">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+
+    <div class="hero-text">
+        <h2>Meny</h2>
+        <p class="typewriter">Här kan du smygkika på vår meny</p>
+    </div>
+</header>
+
+
+
+    <section class="menu-images">
+        <img src="images/meny.jpg" alt="">
+        
+    </section>
+
+    <section class="menu-text">
+        <p>
+            Menyn varierar efter säsong och tillgång på vilt och råvaror från närområdet.
+            Kontakta oss för aktuell meny eller allergier.
+        </p>
+    </section>
+
+    <footer>
+        <p>© Restaurang ASKA</p>
+    </footer>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+
+</html>

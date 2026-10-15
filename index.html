@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Restaurang ASKA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Montserrat:wght@300;400;500&family=Special+Elite&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!--Header med hero-sektion-->
+    <header class="hero">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Restaurang ASKA</a>
+            <!--Navigationsmeny-->
+            <ul class="nav-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="meny.html">Meny</a></li>
+                <li><a href="galleri.html">Bilder</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+
+            <!--Hamburgermeny-->
+            <button class="menu-toggle" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+
+        <!--Hero-text över bakrundsbild-->
+        <div class="hero-text">
+            <h2>Norrländsk gastronomi</h2>
+            <p class="typewriter">Från skog till bord.</p>
+        </div>
+    </header>
+
+    <!--Om oss sektion-->
+    <section class="intro">
+        <h2>Välkommen till Restaurang ASKA</h2>
+        <p>
+            ASKA är en liten krog i Höga Kusten där Norrland står på menyn.
+            Vi arbetar med vilt, lokala råvaror och smaker hämtade direkt från skogen.
+        </p>
+    </section>
+
+    <!--Bilder-->
+    <section class="image-grid">
+        <img src="images/glas.jpg" alt="Närbild på vinglas i en restaurang.">
+        <img src="logga1.png" alt="Restaurangens logga.">
+        <img src="images/smeg.jpg" alt="Interiörbild med Renhorn på väggen och en svart Smegkyl i restaurangen">
+    </section>
+
+    <!--footer-->
+    <footer>
+        <p>© Restaurang ASKA</p>
+    </footer>
+
+    <!--JavaScript för mobilmenyn-->
+   <script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+
+</html>

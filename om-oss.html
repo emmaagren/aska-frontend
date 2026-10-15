@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Om oss – ASKA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+
+<body>
+<!--Header med hero-sektion--> 
+  <header class="hero hero-small">
+
+    <!--Navigationsmeny-->>
+    <nav class="main-nav">
+        <a href="index.html" class="logo">Restaurang ASKA</a>
+        <ul class="nav-links">
+            <li><a href="index.html">Hem</a></li>
+            <li><a href="om-oss.html">Om oss</a></li>
+            <li><a href="meny.html">Meny</a></li>
+            <li><a href="galleri.html">Bilder</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+        </ul>
+        <!--Hamburgermeny-->
+        <button class="menu-toggle" aria-label="Öppna meny">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+<!--Herotext-->>
+    <div class="hero-text">
+        <h2>Om oss</h2>
+        <p class="typewriter">Lär känna vårt kök och vår historia</p>
+    </div>
+</header>
+
+<!--Om oss sektion-->
+
+    <section class="about">
+        <img src="images/emma_kock.jpg" alt="Restaurangens ägare i kockkläder.">
+        <div>
+            <p>
+                ASKA föddes ur kärleken till den norrländska skogen.
+                Här möts eld, aska och råvaror från naturen i en modern tolkning av klassisk gastronomi.
+            </p>
+            <p class="typewriter">
+                Vi lagar mat med respekt för djur, natur och säsong.
+            </p>
+        </div>
+    </section>
+
+    <!--Footer med upphovsrätt.-->
+    <footer>
+        <p>© Restaurang ASKA</p>
+    </footer>
+
+    <!--JavaScript för mobilmeny-->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    const toggle = document.querySelector('.menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    toggle.addEventListener('click', () => {
+        navLinks.classList.toggle('open');
+    });
+});
+</script>
+
+</body>
+
+</html>
