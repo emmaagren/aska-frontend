@@ -20,22 +20,40 @@ async function loadMenu() {
             return;
         }
 
-        menuItems.forEach((item) => {
-            const article = document.createElement("article");
-            article.classList.add("menu-item");
+        // Gruppera maträtterna efter kategori
+        const categories = ["Varmrätter", "Förrätter", "Efterrätter"];
 
-            const name = document.createElement("h3");
-            name.textContent = item.name;
+        categories.forEach((category) => {
+            const items = menuItems.filter((item) => item.category === category);
 
-            const description = document.createElement("p");
-            description.textContent = item.description;
+            if (items.length === 0) return;
 
-            const price = document.createElement("p");
-            price.classList.add("menu-price");
-            price.textContent = `${item.price} kr`;
+            const section = document.createElement("section");
+            section.classList.add("menu-category");
 
-            article.append(name, description, price);
-            container.appendChild(article);
+            const heading = document.createElement("h2");
+            heading.textContent = category;
+            section.appendChild(heading);
+
+            items.forEach((item) => {
+                const article = document.createElement("article");
+                article.classList.add("menu-item");
+
+                const name = document.createElement("h3");
+                name.textContent = item.name;
+
+                const description = document.createElement("p");
+                description.textContent = item.description;
+
+                const price = document.createElement("p");
+                price.classList.add("menu-price");
+                price.textContent = `${item.price} kr`;
+
+                article.append(name, description, price);
+                section.appendChild(article);
+            });
+
+            container.appendChild(section);
         });
 
     } catch (error) {
