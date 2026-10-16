@@ -11,34 +11,35 @@
 
 <body>
 
-<header class="hero hero-small">
-    <nav class="main-nav">
-        <a href="index.html" class="logo">Restaurang ASKA</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="om-oss.html">Om oss</a></li>
-            <li><a href="meny.html">Meny</a></li>
-            <li><a href="galleri.html">Bilder</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Öppna meny">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+    <header class="hero hero-small">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Restaurang ASKA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="meny.html">Meny</a></li>
+                <li><a href="galleri.html">Bilder</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
 
-    <div class="hero-text">
-        <h2>Meny</h2>
-        <p class="typewriter">Här kan du smygkika på vår meny</p>
-    </div>
-</header>
+        <div class="hero-text">
+            <h2>Meny</h2>
+            <p class="typewriter">Här kan du smygkika på vår meny</p>
+        </div>
+    </header>
 
 
+    <section class="menu-section">
+        <div id="menu-container">
+            <p>Menyn laddas...</p>
+        </div>
 
-    <section class="menu-images">
-        <img src="images/meny.jpg" alt="">
-        
     </section>
 
     <section class="menu-text">
@@ -51,16 +52,18 @@
     <footer>
         <p>© Restaurang ASKA</p>
     </footer>
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-});
-</script>
+            toggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
+
+    <script src="menu.js" defer></script>
 
 </body>
 
