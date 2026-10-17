@@ -27,6 +27,39 @@
 
             <p id="login-message"></p>
         </section>
+
+        <section id="admin-panel" hidden>
+            <h2>Hantera menyn</h2>
+            <p>Här kan du administrera restaurangens maträtter.</p>
+
+            <h3>Lägg till maträtt</h3>
+
+            <form id="add-menu-form">
+                <label for="dish-name">Maträttens namn</label>
+                <input type="text" id="dish-name" required>
+
+                <label for="dish-description">Beskrivning</label>
+                <textarea id="dish-description" required></textarea>
+
+                <label for="dish-price">Pris (kr)</label>
+                <input type="number" id="dish-price" min="0" step="1" required>
+
+                <label for="dish-category">Kategori</label>
+                <select id="dish-category" required>
+                    <option value="">Välj kategori</option>
+                    <option value="Varmrätter">Varmrätter</option>
+                    <option value="Förrätter">Förrätter</option>
+                    <option value="Efterrätter">Efterrätter</option>
+                </select>
+
+                <button type="submit">Lägg till maträtt</button>
+            </form>
+
+            <p id="add-menu-message"></p>
+
+            <div id="admin-menu-list"></div>
+        </section>
+
     </main>
 
     <script src="admin.js" defer></script>
