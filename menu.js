@@ -5,7 +5,7 @@ async function loadMenu() {
     if (!container) return;
 
     try {
-        const response = await fetch("http://localhost:3000/api/menu");
+        const response = await fetch("https://aska-api-nfxc.onrender.com/api/menu");
 
         if (!response.ok) {
             throw new Error("Kunde inte hämta menyn.");

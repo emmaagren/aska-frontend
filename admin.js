@@ -9,7 +9,7 @@ loginForm.addEventListener("submit", async (event) => {
     const password = document.querySelector("#password").value;
 
     try {
-        const response = await fetch("http://localhost:3000/api/auth/login", {
+        const response = await fetch("https://aska-api-nfxc.onrender.com/api/auth/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json"
@@ -44,7 +44,7 @@ async function loadAdminMenu() {
     const menuList = document.querySelector("#admin-menu-list");
 
     try {
-        const response = await fetch("http://localhost:3000/api/menu");
+        const response = await fetch("https://aska-api-nfxc.onrender.com/api/menu");
 
         if (!response.ok) {
             throw new Error("Kunde inte hämta menyn.");
@@ -94,7 +94,7 @@ async function loadAdminMenu() {
 
                 try {
                     const response = await fetch(
-                        `http://localhost:3000/api/menu/${item._id}`,
+                        `https://aska-api-nfxc.onrender.com/api/menu/${item._id}`,
                         {
                             method: "DELETE",
                             headers: {
@@ -148,8 +148,8 @@ addMenuForm.addEventListener("submit", async (event) => {
 
     try {
         const url = editingItemId
-            ? `http://localhost:3000/api/menu/${editingItemId}`
-            : "http://localhost:3000/api/menu";
+            ? `https://aska-api-nfxc.onrender.com/api/menu/${editingItemId}`
+            : "https://aska-api-nfxc.onrender.com/api/menu";
 
         const method = editingItemId ? "PUT" : "POST";
 
