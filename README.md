@@ -78,9 +78,15 @@ Den publika menyn ska visa maträtter från databasen och administrationspanelen
 
 ## Publicering
 
-Frontend och backend publiceras separat.
+Frontend är publicerad på Netlify och kommunicerar med ett separat REST API på Render.
 
-Länkar till den publicerade webbplatsen och backend-API:et läggs till när publiceringen är klar.
+**Webbplats:** https://restaurang-aska.netlify.app/
+
+**Administrationspanel:** https://restaurang-aska.netlify.app/admin.html
+
+**Backend-API:** https://aska-api-nfxc.onrender.com/api/menu
+
+Webbplatsens meny hämtas dynamiskt från MongoDB Atlas via backend-API:et. Administrationspanelen används för att hantera maträtterna.
 
 ## Kurs
 
