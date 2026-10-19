@@ -11,28 +11,29 @@
 
 <body>
 
-<header class="hero hero-small">
-    <nav class="main-nav">
-        <a href="index.html" class="logo">Restaurang ASKA</a>
-        <ul class="nav-links">
-            <li><a href="index.html">Hem</a></li>
-            <li><a href="om-oss.html">Om oss</a></li>
-            <li><a href="meny.html">Meny</a></li>
-            <li><a href="galleri.html">Bilder</a></li>
-            <li><a href="kontakt.html">Kontakt</a></li>
-        </ul>
-        <button class="menu-toggle" aria-label="Öppna meny">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-    </nav>
+    <header class="hero hero-small">
+        <nav class="main-nav">
+            <a href="index.html" class="logo">Restaurang ASKA</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="meny.html">Meny</a></li>
+                <li><a href="galleri.html">Bilder</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+            </ul>
+            <button class="menu-toggle" aria-label="Öppna meny">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
 
-    <div class="hero-text">
-        <h2>Kontakt</h2>
-        <p class="typewriter">Vill du skicka en bokningsförfrågan eller komma i kontakt med oss av annan anledning så kan du enklast göra det här.</p>
-    </div>
-</header>
+        <div class="hero-text">
+            <h2>Kontakt</h2>
+            <p class="typewriter">Vill du skicka en bokningsförfrågan eller komma i kontakt med oss av annan anledning
+                så kan du enklast göra det här.</p>
+        </div>
+    </header>
 
 
     <section class="contact">
@@ -42,7 +43,7 @@
             <p><strong>Adress:</strong> Rö, Härnösand</p>
         </div>
 
-        <form class="booking-form">
+        <form class="booking-form" onsubmit="event.preventDefault();">
             <input type="text" placeholder="Namn" required>
             <input type="email" placeholder="E-post" required>
             <input type="date" required>
@@ -55,16 +56,16 @@
         <p>© Restaurang ASKA</p>
     </footer>
 
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-});
-</script>
+            toggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
 
 </body>
 
