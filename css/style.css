@@ -72,17 +72,14 @@ a:hover {
 
 /*HERO / HEADER (BAS)*/
 
+/*Stor hero (startsida)*/
 .hero {
   position: relative;
+  height: 90vh;
   background: center / cover no-repeat;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/*Stor hero (startsida)*/
-.hero {
-  height: 90vh;
   background-image: url("../images/header1.jpg");
 }
 
@@ -174,13 +171,9 @@ a:hover {
 
 /*BILDER*/
 
-.image-grid,
-.menu-images {
+.image-grid {
   display: grid;
   gap: 20px;
-}
-
-.image-grid {
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   padding: 40px;
 }
@@ -202,7 +195,6 @@ a:hover {
   height: auto;
   display: block;
 }
-
 
 .menu-images {
   display: flex;
@@ -412,12 +404,7 @@ footer {
     flex-direction: column;
   }
 
-  .about img {
-    width: 100%;
-  }
-
   .gallery-grid {
-    grid-template-columns: 1fr;
     padding: 40px 20px;
   }
 
@@ -427,7 +414,7 @@ footer {
 }
 
 /* Placering av menyns kategorier på större skärmar */
-@media (min-width: 768px) {
+@media (min-width: 701px) {
   .menu-category:nth-child(1) {
     grid-column: 1;
     grid-row: 1 / span 2;
