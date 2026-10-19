@@ -30,6 +30,7 @@ loginForm.addEventListener("submit", async (event) => {
         sessionStorage.setItem("adminToken", data.token);
         loginMessage.textContent = "Du är inloggad!";
         document.querySelector("#admin-panel").hidden = false;
+        document.querySelector("#login-form").parentElement.hidden = true;
         loadAdminMenu();
         loginForm.reset();
 
@@ -183,4 +184,15 @@ addMenuForm.addEventListener("submit", async (event) => {
         addMenuMessage.textContent = error.message;
         console.error(error);
     }
+});
+
+// Logga ut administratören
+document.querySelector("#logout-button").addEventListener("click", () => {
+    sessionStorage.removeItem("adminToken");
+
+    document.querySelector("#admin-panel").hidden = true;
+    document.querySelector("#login-form").parentElement.hidden = false;
+
+    document.querySelector("#login-form").reset();
+    document.querySelector("#login-message").textContent = "";
 });

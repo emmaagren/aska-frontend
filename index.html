@@ -59,19 +59,20 @@
     <!--footer-->
     <footer>
         <p>© Restaurang ASKA</p>
+        <p><a href="admin.html">Personalinloggning</a></p>
     </footer>
 
     <!--JavaScript för mobilmenyn-->
-   <script>
-document.addEventListener("DOMContentLoaded", function() {
-    const toggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
 
-    toggle.addEventListener('click', () => {
-        navLinks.classList.toggle('open');
-    });
-});
-</script>
+            toggle.addEventListener('click', () => {
+                navLinks.classList.toggle('open');
+            });
+        });
+    </script>
 
 </body>
 
